@@ -195,7 +195,7 @@ static int dcc_resolve_march_native(char* argv[], char*** ret_newargv, int extra
                 if (end) *end = 0;
                 int n_arguments = 1;
                 const char* cptr;
-                for (cptr = args;*ptr;ptr++) {
+                for (cptr = args;*cptr;cptr++) {
                     if (*cptr == ' ') n_arguments++;
                 }
                 pclose(in);
