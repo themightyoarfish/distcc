@@ -13,3 +13,14 @@ RUN apt-get update && \
                     libiberty-dev \
                     build-essential \
                     make
+ENTRYPOINT [\
+  "distccd", \
+  "--daemon", \
+  "--no-detach", \
+  "--user", "distcc", \
+  "--port", "3632", \
+  "--stats", \
+  "--stats-port", "3633", \
+  "--log-stderr", \
+  "--listen", "0.0.0.0"\
+]
